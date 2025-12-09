@@ -1,30 +1,26 @@
 # Descobrindo-Aritmética
 
-[![Status](https://img.shields.io/badge/Status-Ativo-green?style=for-the-badge)]()  
-[![Licença](https://img.shields.io/github/license/Aj3838/Descobrindo-Aritm-tica?style=for-the-badge)]()  
-[![Linguagens](https://img.shields.io/github/languages/top/Aj3838/Descobrindo-Aritm-tica?style=for-the-badge)]()
+[![Status](https://img.shields.io/badge/Projeto-Ativo-green?style=for-the-badge)]()  
+[![Versão](https://img.shields.io/badge/Versão-1.0-blue?style=for-the-badge)]()  
+[![Tecnologias](https://img.shields.io/badge/Usa-HTML%2C%20CSS%2C%20JS-yellow?style=for-the-badge)]()  
+[![Educação](https://img.shields.io/badge/Foco-Aritmética-orange?style=for-the-badge)]()
 
-Um site educativo para aprender aritmética de forma prática, com **quizzes interativos** e uma **calculadora funcional** — ideal para quem quer treinar operações básicas de matemática.
+Um site educativo sobre aritmética com quizzes interativos e uma calculadora funcional para treinar operações matemáticas rapidamente.
 
-## Funcionalidades
+## Conteúdos do site
 
-- Explicações introdutórias sobre aritmética  
-- Quiz interativo com validação de respostas  
-- Calculadora funcional para exercícios rápidos  
+- Explicações curtas sobre aritmética  
+- Quiz com validação de respostas  
+- Calculadora funcional  
 
-## Como usar
+## Como utilizar
 
-Basta abrir o arquivo `index.html` no navegador. Nenhuma instalação especial é necessária.
+Abra o arquivo `index.html` diretamente no navegador.
 
-## Tecnologias usadas
+## Tecnologias utilizadas
 
 HTML · CSS · JavaScript
 
 ## Objetivo do projeto
 
-Oferecer uma forma simples e direta de praticar e revisar conceitos de aritmética, com ferramentas interativas e acessíveis.
-
-## Licença
-
-Distribuído sob a licença do tipo “MIT” (ou outra que você escolher).
-
+Proporcionar aprendizado simples, rápido e prático de aritmética.
