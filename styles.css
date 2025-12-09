@@ -1,0 +1,453 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+  }
+ 
+  body {
+    background: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+    font-size: 18px;
+    min-height: 100vh;
+  }
+ 
+  /* Cabeçalho e Navegação */
+  header {
+    background-color: #003366;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+ 
+  .navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  .logo {
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+ 
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+ 
+  .nav-links li {
+    display: inline-block;
+  }
+ 
+  .nav-btn {
+    background: transparent;
+    border: none;
+    color: #ddd;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+  }
+ 
+  .nav-btn:hover,
+  .nav-btn.active {
+    background-color: #0059b3;
+    color: #fff;
+    outline: none;
+  }
+ 
+  /* Conteúdo principal */
+  main {
+    max-width: 1100px;
+    margin: 40px auto 80px auto;
+    padding: 0 20px;
+    min-height: 600px;
+  }
+ 
+  /* Seções */
+  .section {
+    display: none;
+    animation: fadeIn 1s ease forwards;
+  }
+ 
+  .section.active {
+    display: block;
+  }
+ 
+  /* Animação suave */
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+ 
+  /* Títulos */
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #003366;
+    border-bottom: 4px solid #0059b3;
+    padding-bottom: 8px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+  }
+ 
+  h3 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #004080;
+  }
+ 
+  /* Parágrafos */
+  p {
+    margin-bottom: 16px;
+    color: #333;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+ 
+  /* Listas */
+  ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+  }
+ 
+  ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #444;
+  }
+ 
+  /* Personagens */
+  .personagem-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+ 
+  .personagem {
+    background: #e6f0ff;
+    border-left: 6px solid #0059b3;
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 4px 12px rgba(0, 80, 160, 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+ 
+  .personagem:hover {
+    box-shadow: 0 10px 20px rgba(0, 80, 160, 0.35);
+  }
+ 
+  .personagem img {
+    max-width: 280px;
+    border-radius: 12px;
+    object-fit: cover;
+    user-select: none;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  }
+ 
+  .personagem div {
+    flex: 1;
+  }
+ 
+  .personagem h3 {
+    margin-top: 0;
+    color: #00264d;
+    user-select: text;
+  }
+ 
+  /* Aritmética prática */
+  .aritmetica-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 18px rgba(0, 100, 220, 0.1);
+    margin-bottom: 40px;
+    line-height: 1.75;
+  }
+ 
+  .aritmetica-exercicios {
+    background: #d9eaff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 20px rgba(0, 100, 220, 0.15);
+  }
+ 
+  .exercise {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #0073e6;
+  }
+ 
+  .exercise:last-child {
+    border-bottom: none;
+  }
+ 
+  .exercise p {
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: #003366;
+  }
+ 
+  .exercise input[type="number"] {
+    width: 160px;
+    padding: 10px 14px;
+    font-size: 1.1rem;
+    border: 2px solid #0073e6;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+ 
+  .exercise input[type="number"]:focus {
+    outline: none;
+    border-color: #004a99;
+    box-shadow: 0 0 8px rgba(0, 73, 153, 0.4);
+  }
+ 
+  .check-btn {
+    margin-left: 15px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+ 
+  .check-btn:hover {
+    background-color: #004a99;
+  }
+ 
+  .feedback {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-height: 1.4em;
+    color: #1a8917;
+    user-select: none;
+  }
+ 
+  /* Curiosidades */
+  #curiosidades ul {
+    background: #eef6ff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    border-left: 6px solid #0059b3;
+    box-shadow: 0 5px 15px rgba(0, 90, 180, 0.12);
+  }
+ 
+  #curiosidades ul li {
+    margin-bottom: 18px;
+    font-size: 1.15rem;
+    color: #00264d;
+    line-height: 1.6;
+  }
+ 
+  /* Quiz */
+  #quiz {
+    text-align: center;
+    background: #cce0ff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 22px rgba(0, 110, 255, 0.2);
+    user-select: none;
+  }
+ 
+  .quiz-question {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #003366;
+    min-height: 3.5em;
+  }
+ 
+  .quiz-btn {
+    background-color: #0059b3;
+    border: none;
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 1.15rem;
+    margin: 10px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+ 
+  .quiz-btn:hover:not(:disabled) {
+    background-color: #003d73;
+  }
+ 
+  .quiz-btn:disabled {
+    background-color: #a3b9d8;
+    cursor: not-allowed;
+  }
+ 
+  .quiz-answer {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a8917;
+    min-height: 2em;
+  }
+ 
+  /* Contato */
+  #contato {
+    background: #e3f2fd;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 120, 255, 0.15);
+    user-select: text;
+  }
+ 
+  #contato ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #003366;
+  }
+ 
+  #contato a.email-link {
+    color: #0059b3;
+    text-decoration: none;
+    font-weight: 600;
+  }
+ 
+  #contato a.email-link:hover {
+    text-decoration: underline;
+  }
+ 
+  /* Responsividade */
+  @media screen and (max-width: 980px) {
+    .navbar {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .personagem {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .personagem img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .aritmetica-content, .aritmetica-exercicios {
+      padding: 20px;
+    }
+  }
+ 
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: 16px;
+    }
+    .nav-btn {
+      font-size: 0.9rem;
+      padding: 8px 10px;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    .exercise p {
+      font-size: 1rem;
+    }
+    .quiz-question {
+      font-size: 1.5rem;
+    }
+    .quiz-btn {
+      font-size: 1rem;
+      padding: 12px 24px;
+    }
+  }
+ /* CALCULADORA */
+.calculadora {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  margin: 30px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+#display {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+#display:focus {
+  outline: none;
+}
+
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.05);
+}
+
+.btn-op {
+  background: rgba(255,255,255,0.25);
+}
+
+.btn-func {
+  background: #3b82f6;
+}
+
+#igual {
+  background: #1d4ed8;
+  grid-row: span 2;
+}
+
+#zero {
+  grid-column: span 2;
+}
